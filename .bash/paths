@@ -1,0 +1,5 @@
+export HADOOP_HOME=/usr/local/hadoop
+export PATH="/usr/local/mysql/bin:/usr/local/go/bin:$HADOOP_HOME/bin:$PATH"
+export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
+
+export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"

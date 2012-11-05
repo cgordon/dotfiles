@@ -1,2 +1,0 @@
-export GOPATH=~/.golang:~/Projects/golang
-export PATH=$PATH:~/.golang/bin

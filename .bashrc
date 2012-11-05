@@ -1,12 +1,9 @@
-source ~/.bash/aliases
-source ~/.bash/aws
+source ~/.aliases
 source ~/.bash/completions
 source ~/.bash/config
-source ~/.bash/paths
+source ~/.paths
 source ~/.bash/pinterest
 source ~/.bash/prompt
-source ~/.bash/python
-source ~/.bash/golang
 
 if [ -f ~/.localrc ]; then
   source ~/.localrc

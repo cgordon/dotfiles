@@ -17,6 +17,7 @@ plugins=(git ssh-agent osx)
 
 source $HOME/.aliases
 source $HOME/.paths
+source $HOME/.aws/credentials
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...

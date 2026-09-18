@@ -1,0 +1,9 @@
+# macOS ships an ssh-agent via launchd; these two options make ssh load keys
+# into it (and their passphrases from Keychain) on first use.
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+
+Host github.com
+  IdentityFile ~/.ssh/github_id_ed25519
+  IdentitiesOnly yes

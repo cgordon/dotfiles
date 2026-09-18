@@ -1,0 +1,8 @@
+# Global ignores: OS and editor noise only. Project-specific ignores belong in the project.
+.DS_Store
+._*
+*.swp
+*.swo
+*~
+.idea/
+.vscode/

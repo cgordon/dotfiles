@@ -1,0 +1,88 @@
+# Taken from:
+#   https://blog.gitbutler.com/how-git-core-devs-configure-git/
+#   https://github.com/jparise/dotfiles
+#   https://jvns.ca/blog/2024/02/16/popular-git-config-options
+
+[user]
+	email = charles.gordon@gmail.com
+	name = Charles Gordon
+	useConfigOnly = true
+
+[core]
+	pager = less -FRX
+	precomposeUnicode = true
+
+[alias]
+	amend = git commit --amend
+	co = checkout
+	unstage = reset HEAD --
+	uncommit = reset --soft HEAD^
+
+[protocol "http"]
+	allow = never
+
+[protocol "git"]
+	allow = never
+
+[init]
+	defaultBranch = main
+
+[branch]
+	sort = -committerdate
+
+[tag]
+	sort = version:refname
+
+[push]
+	default = current
+	autoSetupRemote = true
+
+[rebase]
+	autoSquash = true
+	updateRefs = true
+
+[blame]
+	date = short
+
+[diff]
+	algorithm = histogram
+	colorMoved = "default"
+	colorMovedWS = "allow-indentation-change"
+	mnemonicPrefix = true
+	renames = copies
+
+[grep]
+	lineNumber = true
+
+[commit]
+	verbose = true
+
+[column]
+	ui = auto
+
+[fetch]
+	prune = true
+
+[help]
+	autocorrect = prompt
+
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	pager = true
+	ui = true
+
+[color "branch"]
+	current = bold cyan
+	local = cyan
+	remote = green
+	upstream = bold blue
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[merge]
+	conflictStyle = zdiff3

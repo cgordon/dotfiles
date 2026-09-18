@@ -1,0 +1,11 @@
+background-opacity=0.85
+background-blur=16
+background=#000000
+
+font-size=16
+font-thicken=true
+font-thicken-strength=1
+adjust-cell-height=1
+
+# https://ghostty.org/docs/help/terminfo
+shell-integration-features=ssh-terminfo,ssh-env

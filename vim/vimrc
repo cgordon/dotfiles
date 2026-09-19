@@ -1,0 +1,3 @@
+" Yank/delete/put use the macOS pasteboard, so y in vim -> Cmd-V anywhere,
+" and Cmd-C anywhere -> p in vim. Requires +clipboard (Homebrew vim has it).
+set clipboard=unnamed

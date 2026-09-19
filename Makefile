@@ -8,6 +8,7 @@ CONFIG := $(HOME)/.config
 	install-ghostty \
 	install-tmux \
 	install-starship \
+	install-vim \
 	install-zsh
 
 install: install-macos \
@@ -17,6 +18,7 @@ install: install-macos \
 	install-ghostty \
 	install-tmux \
 	install-starship \
+	install-vim \
 	install-zsh
 
 # link <source>,<target>: replace <target> with a symlink to <source>.
@@ -53,6 +55,9 @@ install-tmux: $(CONFIG)
 
 install-starship: $(CONFIG)
 	$(call link,$(CURDIR)/starship/starship.toml,$(CONFIG)/starship.toml)
+
+install-vim: $(CONFIG)
+	$(call link,$(CURDIR)/vim,$(CONFIG)/vim)
 
 # ~/.zshenv sets ZDOTDIR=~/.config/zsh, so .zprofile/.zshrc are read from there.
 install-zsh: $(CONFIG)

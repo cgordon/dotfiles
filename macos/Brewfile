@@ -8,7 +8,6 @@ brew "starship"
 brew "tmux"
 brew "uv"
 brew "vim"
-brew "zoxide"
 
 cask "claude-code"
 cask "ghostty"

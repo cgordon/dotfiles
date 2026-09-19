@@ -83,9 +83,11 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
 zstyle ':fzf-tab:*' switch-group '<' '>'
+# Preview any path completion: directory listing for dirs, bat for files.
+# $realpath is only set for file/dir candidates, so other completions show nothing.
 # Previews run in a non-tty, so bare --color (== always on macOS) is what we want here.
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color "$realpath"'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color "$realpath"'
+zstyle ':fzf-tab:complete:*:*' fzf-preview \
+  'if [[ -d $realpath ]]; then ls --color "$realpath"; elif [[ -f $realpath ]]; then bat --color=always --style=numbers --line-range=:200 "$realpath"; fi'
 
 # ---------------------------------------------------------------------------
 # Aliases
@@ -96,5 +98,4 @@ alias ls='ls --color=auto'   # bare --color forces color into pipes on macOS
 # Shell integrations
 # ---------------------------------------------------------------------------
 eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
